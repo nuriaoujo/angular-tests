@@ -82,4 +82,10 @@ describe('KarmaJasmineService', () => {
     const resultado = service.numeroPar(8);
     expect(resultado).toBe("Es par");
   });
+
+  //Palíndromo
+  it('debería ser palíndromo', () => {
+    const resultado = service.palindromo("ojo");
+    expect(resultado).toBe("Es palíndromo");
+  });
 });
