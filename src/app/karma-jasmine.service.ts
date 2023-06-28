@@ -63,4 +63,16 @@ export class KarmaJasmineService {
     }
   }
   //Función para verificar si un número es primo
+  numeroPrimo(a: number): string {
+    if (a <= 1) {
+      return "No es primo";
+    }
+    for (let i = 2; i <= Math.sqrt(a) + 1; i++) {
+      if (a % i === 0) {
+        return "No es primo";
+      }
+    }
+    return "Es primo";
+  }
+  
 }

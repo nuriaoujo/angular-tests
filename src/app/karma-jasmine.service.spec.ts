@@ -119,4 +119,13 @@ describe('KarmaJasmineService', () => {
     const resultado = service.convertirAMayuscula("HOLA CARACOLA");
     expect(resultado).toBe("HOLA CARACOLA");
   })
+  //Número primo
+  it('debería detectar que el número es primo', () => {
+    const resultado = service.numeroPrimo(5);
+    expect(resultado).toBe("Es primo");
+  });
+  it('debería detectar que el número no es primo', () => {
+    const resultado = service.numeroPrimo(6);
+    expect(resultado).toBe("No es primo");
+  });
 });
