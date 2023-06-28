@@ -44,4 +44,16 @@ export class KarmaJasmineService {
     }
     return resultado;
   }
+  //Función para obtener el máximo de dos números
+  maximoNumero(a:number, b:number): string | undefined{
+    if(a>b){
+      return "El número mayor es " + a;
+    } else if(a==b){
+      return "Los números son iguales";
+    } else if(a<b){
+      return "El número mayor es " + b;
+    }
+  }
+  //Función para convertir una cadena a mayúsculas
+  //Función para verificar si un número es primo
 }

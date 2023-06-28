@@ -92,5 +92,18 @@ describe('KarmaJasmineService', () => {
   it('debería dar el factorial de un número', () => {
     const resultado = service.factorial(5);
     expect(resultado).toBe(120);
-  })
+  });
+  //Maximo numero
+  it('el primer número debería ser mayor', () => {
+    const resultado = service.maximoNumero(12, 3);
+    expect(resultado).toBe("El número mayor es 12");
+  });
+  it('el segundo número debería ser mayor', () => {
+    const resultado = service.maximoNumero(3, 7);
+    expect(resultado).toBe("El número mayor es 7");
+  });
+  it('los dos números deberían ser iguales', () => {
+    const resultado = service.maximoNumero(3, 3);
+    expect(resultado).toBe("Los números son iguales");
+  });
 });
