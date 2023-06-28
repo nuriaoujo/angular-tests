@@ -55,5 +55,12 @@ export class KarmaJasmineService {
     }
   }
   //Función para convertir una cadena a mayúsculas
+  convertirAMayuscula(a:string): string {
+    if(a == a.toUpperCase()){
+      return a;
+    } else {
+      return a.toUpperCase();
+    }
+  }
   //Función para verificar si un número es primo
 }

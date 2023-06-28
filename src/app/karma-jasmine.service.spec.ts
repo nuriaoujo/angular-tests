@@ -106,4 +106,17 @@ describe('KarmaJasmineService', () => {
     const resultado = service.maximoNumero(3, 3);
     expect(resultado).toBe("Los números son iguales");
   });
+  //Cadena a mayúscula
+  it('debería estar en mayúsculas', () => {
+    const resultado = service.convertirAMayuscula("Hola caracola");
+    expect(resultado).toBe("HOLA CARACOLA");
+  });
+  it('debería estar en mayúscula y aceptar puntos y comas' , () => {
+    const resultado = service.convertirAMayuscula("Hola, caracola!");
+    expect(resultado).toBe("HOLA, CARACOLA!");
+  });
+  it('debería mantenerse igual si la cadena ya está en mayúscula', () => {
+    const resultado = service.convertirAMayuscula("HOLA CARACOLA");
+    expect(resultado).toBe("HOLA CARACOLA");
+  })
 });
