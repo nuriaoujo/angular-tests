@@ -128,4 +128,17 @@ describe('KarmaJasmineService', () => {
     const resultado = service.numeroPrimo(6);
     expect(resultado).toBe("No es primo");
   });
+  //Número positivo
+  it('debería detectar que es un número positivo', () => {
+    const resultado = service.numeroPositivo(2);
+    expect(resultado).toBe(true);
+  });
+  it('debería detectar que no es un número positivo', () => {
+    const resultado = service.numeroPositivo(-2);
+    expect(resultado).toBe(false);
+  });
+  it('debería detectar que 0 es positivo', () => {
+    const resultado = service.numeroPositivo(0);
+    expect(resultado).toBe(true);
+  });
 });
