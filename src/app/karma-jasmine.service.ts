@@ -111,5 +111,12 @@ export class KarmaJasmineService {
     return caracteres;
   }
   //Función para calcular la suma de los dígitos de un número
-  
+  sumaDigitos(a:number): number {
+    let digitos = a.toString().split(''); //separamos los digitos
+    var numeros = digitos.map(Number);
+    var suma = numeros.reduce(function (a:number, b:number) {
+        return a + b;
+    }, 0);
+    return suma;
+  }
 }

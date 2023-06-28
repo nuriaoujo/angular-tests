@@ -185,4 +185,9 @@ describe('KarmaJasmineService', () => {
     const resultado = service.arrayCaracteres("Hola, caracola");
     expect(resultado).toBe(["h", "o", "l", "a", "c", "a", "r", "a", "c", "o", "l", "a"]);
   });
+  //Suma digitos
+  it('debería dar como resultado la suma de los dígitos', () => {
+    const resultado = service.sumaDigitos(25);
+    expect(resultado).toBe(7);
+  });
 });
