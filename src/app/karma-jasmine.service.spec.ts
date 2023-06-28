@@ -88,4 +88,9 @@ describe('KarmaJasmineService', () => {
     const resultado = service.palindromo("ojo");
     expect(resultado).toBe("Es palíndromo");
   });
+  //Factorial
+  it('debería dar el factorial de un número', () => {
+    const resultado = service.factorial(5);
+    expect(resultado).toBe(120);
+  })
 });

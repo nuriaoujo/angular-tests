@@ -36,4 +36,12 @@ export class KarmaJasmineService {
     }
   }
   //Función para calcular el factorial de un número
+  factorial(a:number):number{
+    var resultado = 1;
+    var i;
+    for(i = 1; i <= a; i++){
+      resultado = resultado *1;
+    }
+    return resultado;
+  }
 }
