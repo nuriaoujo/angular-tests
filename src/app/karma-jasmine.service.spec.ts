@@ -159,4 +159,17 @@ describe('KarmaJasmineService', () => {
     const resultado = service.comprobarSubstring("Hola caracola");
     expect(resultado).toBe(false);
   });
+  //Promedio array de números
+  it('debería dar el promedio de números positivos', () => {
+    const resultado = service.promedioNumeros([5,6,7,4,3,2]);
+    expect(resultado).toBe(4.5);
+  });
+  it('debería dar el promedio de números negativos', () => {
+    const resultado = service.promedioNumeros([-2,-3,-4]);
+    expect(resultado).toBe(-3);
+  });
+  it('debería dar el promedio de números positivos y uno negativo', () => {
+    const resultado = service.promedioNumeros([1,2,3,4,5,6,7,-8]);
+    expect(resultado).toBe(2.5);
+  });
 });

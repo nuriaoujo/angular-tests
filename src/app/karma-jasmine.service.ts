@@ -92,4 +92,17 @@ export class KarmaJasmineService {
       return false;
     }
   }
+  //Función para obtener el promedio de un array de números
+  promedioNumeros(a: any[number]): number {
+    var cantidadNumeros = a.length;
+    var numeros = a.map(Number);
+    var suma = numeros.reduce(function (a:number, b:number) {
+        return a + b;
+    }, 0);
+    return suma / cantidadNumeros;
+  }
+
+  //Función para convertir una cadena en un array de caracteres
+
+  //Función para calcular la suma de los dígitos de un número
 }
