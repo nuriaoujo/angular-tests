@@ -88,5 +88,12 @@ export class KarmaJasmineService {
   }
 
   //Función para verificar si una cadena contiene un substring
-  
+  comprobarSubstring(a: string): boolean {
+    var substring = a.split(' ');
+    if(substring.length == 1){
+      return true;
+    } else {
+      return false;
+    }
+  }
 }

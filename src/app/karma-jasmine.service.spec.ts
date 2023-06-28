@@ -150,4 +150,13 @@ describe('KarmaJasmineService', () => {
     const resultado = service.listaArray([]);
     expect(resultado).toBe(0);
   });
+  //Comprobar substring
+  it('debería detectar que contiene un substring', () => {
+    const resultado = service.comprobarSubstring("Hola");
+    expect(resultado).toBe(true);
+  });
+  it('debería detectar que contiene más de un substring', () => {
+    const resultado = service.comprobarSubstring("Hola caracola");
+    expect(resultado).toBe(false);
+  });
 });
