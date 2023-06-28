@@ -76,11 +76,7 @@ export class KarmaJasmineService {
   }
   //Función para verificar si un número es positivo
   numeroPositivo(a:number): boolean {
-    if(a>=0){
-      return true;
-    } else {
-      return false;
-    }
+    return a<=0;
   }
   //Función para obtener el número de elementos en un array
   listaArray(a: any[]): number {
