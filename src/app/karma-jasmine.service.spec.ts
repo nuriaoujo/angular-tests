@@ -172,4 +172,17 @@ describe('KarmaJasmineService', () => {
     const resultado = service.promedioNumeros([1,2,3,4,5,6,7,-8]);
     expect(resultado).toBe(2.5);
   });
+  //Array caracteres
+  it('debería dar un array de caracteres', () => {
+    const resultado = service.arrayCaracteres("hola");
+    expect(resultado).toBe(["h", "o", "l", "a"]);
+  });
+  it('debería dar un array con caracteres sin mayúsculas', () => {
+    const resultado = service.arrayCaracteres("Hola Caracola");
+    expect(resultado).toBe(["h", "o", "l", "a", "c", "a", "r", "a", "c", "o", "l", "a"]);
+  });
+  it('debería dar un array con caracteres sin comas', () => {
+    const resultado = service.arrayCaracteres("Hola, caracola");
+    expect(resultado).toBe(["h", "o", "l", "a", "c", "a", "r", "a", "c", "o", "l", "a"]);
+  });
 });

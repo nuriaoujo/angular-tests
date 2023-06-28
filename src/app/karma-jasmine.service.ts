@@ -103,6 +103,13 @@ export class KarmaJasmineService {
   }
 
   //Función para convertir una cadena en un array de caracteres
-
+  arrayCaracteres(a:string): any[string]{
+    let palabra = a.toLowerCase();
+    let caracteres = palabra.split('').filter(function (caracter) {
+      return caracter.trim() !== '';
+    });
+    return caracteres;
+  }
   //Función para calcular la suma de los dígitos de un número
+  
 }
