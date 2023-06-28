@@ -141,4 +141,13 @@ describe('KarmaJasmineService', () => {
     const resultado = service.numeroPositivo(0);
     expect(resultado).toBe(true);
   });
+  //Cantidad array
+  it('debería dar la cantidad de elementos de un array', () => {
+    const resultado = service.listaArray([1,2,3,4,5]);
+    expect(resultado).toBe(5);
+  });
+  it('debería dar 0 de cantidad en el array', () => {
+    const resultado = service.listaArray([]);
+    expect(resultado).toBe(0);
+  });
 });

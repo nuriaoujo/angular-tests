@@ -83,6 +83,9 @@ export class KarmaJasmineService {
     }
   }
   //Función para obtener el número de elementos en un array
+  listaArray(a: any[]): number {
+    return a.length;
+  }
 
   //Función para verificar si una cadena contiene un substring
   
