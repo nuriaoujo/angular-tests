@@ -160,6 +160,9 @@ export class KarmaJasmineService {
   
     return moda;
   }
-  
+  //Función para calcular el número de días entre dos fechas
+  calcularFecha(fecha1: Date, fecha2: Date): number {
+    let fechaTotal = fecha1.getTime() - fecha2.getTime()
+    return Math.abs(Math.floor(fechaTotal / (1000 * 60 * 60 * 24)));
+  }
 }
-

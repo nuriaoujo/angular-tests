@@ -220,9 +220,22 @@ describe('KarmaJasmineService', () => {
   it('debería detectar que hay un único número', () => {
     const resultado = service.modaArray([3]);
     expect(resultado).toBe(3);
-  })
+  });
   it('debería detectar que hay un número repetido más que otro', () => {
     const resultado = service.modaArray([2,2,2,3,3,3,4,4,4,4]);
     expect(resultado).toBe(4);
-  })
+  });
+  //Calcular fechas
+  it('debería calcular los días de diferencia entre dos fechas', () => {
+    const fechaInicio = new Date("2018/01/12");
+    const fechaFin = new Date("2018/01/18");
+    const resultado = service.calcularFecha(fechaInicio, fechaFin);
+    expect(resultado).toBe(6);
+  });
+  it('debería calcular los días de diferencia entre dos fechas', () => {
+    const fechaInicio = new Date("2018/01/12");
+    const fechaFin = new Date("2018/01/10");
+    const resultado = service.calcularFecha(fechaInicio, fechaFin);
+    expect(resultado).toBe(2);
+  });
 });
