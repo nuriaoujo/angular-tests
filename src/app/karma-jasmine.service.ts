@@ -174,4 +174,9 @@ export class KarmaJasmineService {
       return false;
     }
   }
+    
+  //Función para ordenar un array de números de forma ascendente
+  ordenarArray(a: any[number]) : any[number] {
+    return a.sort((num1, num2) => num1 - num2);
+  }
 }

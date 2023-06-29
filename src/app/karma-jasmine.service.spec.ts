@@ -249,4 +249,10 @@ describe('KarmaJasmineService', () => {
     const resultado = service.bisiesto(fecha);
     expect(resultado).toBe(false);
   });
+  //Ordenar array
+  it('debería ordenar de manera ascendente', () => {
+    const resultado = service.ordenarArray([5,6,4,3,2,1]);
+    expect(resultado).toBe([1,2,3,4,5,6]);
+  });
 });
+
