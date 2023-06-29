@@ -179,4 +179,8 @@ export class KarmaJasmineService {
   ordenarArray(a: any[number]) : any[number] {
     return a.sort((num1, num2) => num1 - num2);
   }
+  //Función para calcular el área de un triángulo
+  areaTriangulo(base: number, altura: number): number{
+    return (base * altura)/2;
+  }
 }

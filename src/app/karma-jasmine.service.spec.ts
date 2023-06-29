@@ -252,7 +252,12 @@ describe('KarmaJasmineService', () => {
   //Ordenar array
   it('debería ordenar de manera ascendente', () => {
     const resultado = service.ordenarArray([5,6,4,3,2,1]);
-    expect(resultado).toBe([1,2,3,4,5,6]);
+    expect(resultado).toBe([1,2,3,4,5,6])
   });
+  //Area triángulo
+  it('debería calcular el área de un triángulo', () => {
+    const resultado = service.areaTriangulo(3, 12);
+    expect(resultado).toBe(18);
+  })
 });
 
