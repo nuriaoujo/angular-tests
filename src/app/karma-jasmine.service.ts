@@ -143,5 +143,23 @@ export class KarmaJasmineService {
     let perimetro = longitud_lado * numero_lados;
     return (perimetro * apotema)/2;
   }
+  //Función para encontrar la moda (valor más frecuente) en un array de números
+  modaArray(a: any[number]): number | undefined {
+    let frecuencia: number = 0;
+    let moda: number | undefined;
+    let frecuencias: { [key: number]: number } = {};
+  
+    for (let i = 0; i < a.length; i++) {
+      let num = a[i];
+      frecuencias[num] = (frecuencias[num] || 0) + 1;
+      if (frecuencias[num] > frecuencia) {
+        frecuencia = frecuencias[num];
+        moda = num;
+      }
+    }
+  
+    return moda;
+  }
   
 }
+

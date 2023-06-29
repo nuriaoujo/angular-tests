@@ -212,4 +212,17 @@ describe('KarmaJasmineService', () => {
     const resultado = service.calcularArea(4,3,6);
     expect(resultado).toBe(36);
   })
+  //moda array
+  it('debería detectar que hay un número repetido', () => {
+  const resultado = service.modaArray([1,2,3,4,4,5,6]);
+  expect(resultado).toBe(4);
+  });
+  it('debería detectar que hay un único número', () => {
+    const resultado = service.modaArray([3]);
+    expect(resultado).toBe(3);
+  })
+  it('debería detectar que hay un número repetido más que otro', () => {
+    const resultado = service.modaArray([2,2,2,3,3,3,4,4,4,4]);
+    expect(resultado).toBe(4);
+  })
 });
