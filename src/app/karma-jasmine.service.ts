@@ -165,4 +165,13 @@ export class KarmaJasmineService {
     let fechaTotal = fecha1.getTime() - fecha2.getTime()
     return Math.abs(Math.floor(fechaTotal / (1000 * 60 * 60 * 24)));
   }
+  //Función para verificar si un año es bisiesto
+  bisiesto(fecha:Date):boolean{
+    let anio = fecha.getFullYear();
+    if ((anio % 4 === 0 && anio % 100 !== 0) || anio % 400 === 0) {
+      return true;
+    } else {
+      return false;
+    }
+  }
 }

@@ -238,4 +238,15 @@ describe('KarmaJasmineService', () => {
     const resultado = service.calcularFecha(fechaInicio, fechaFin);
     expect(resultado).toBe(2);
   });
+  //Año bisiesto
+  it('debería detectar que es bisiesto', () => {
+    const fecha = new Date("2024/01/12");
+    const resultado = service.bisiesto(fecha);
+    expect(resultado).toBe(true);
+  });
+  it('debería detectar que no es bisiesto', () => {
+    const fecha = new Date("2023/01/12");
+    const resultado = service.bisiesto(fecha);
+    expect(resultado).toBe(false);
+  });
 });
