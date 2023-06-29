@@ -119,4 +119,29 @@ export class KarmaJasmineService {
     }, 0);
     return suma;
   }
+
+  //Función para verificar si una cadena es un anagrama de otra(mismas letras pero distintas posiciones)
+  anagrama(a:string, b:string): boolean {
+    let palabraA = a.split('');
+    let palabraB = b.split('');
+    if(palabraA.length == palabraB.length){
+      palabraA.sort();
+      palabraB.sort();
+      let nuevaPalabraA = palabraA.join('');
+      let nuevaPalabraB = palabraB.join('');
+      if(nuevaPalabraA == nuevaPalabraB){
+        return true;
+      } else {
+        return false;
+      }
+    } else {
+      return false;
+    }
+  }
+  //Función para calcular el área de un polígono regular(apotema, longitud_lado, numero_lados)
+  calcularArea(apotema:number, longitud_lado:number, numero_lados:number): number {
+    let perimetro = longitud_lado * numero_lados;
+    return (perimetro * apotema)/2;
+  }
+  
 }

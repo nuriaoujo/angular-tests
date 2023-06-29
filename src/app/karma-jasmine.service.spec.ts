@@ -190,4 +190,26 @@ describe('KarmaJasmineService', () => {
     const resultado = service.sumaDigitos(25);
     expect(resultado).toBe(7);
   });
+  //Anagrama
+  it('debería detectar que es un anagrama', () => {
+    const resultado = service.anagrama("casa", "saca");
+    expect(resultado).toBe(true);
+  });
+  it('debería detectar que uno es más largo que otro', () => {
+    const resultado = service.anagrama("casa", "sacas");
+    expect(resultado).toBe(false);
+  });
+  it('debería detectar que no es un anagrama', () => {
+    const resultado = service.anagrama("hola", "jeje");
+    expect(resultado).toBe(false);
+  });
+  //calcular area
+  it('debería calcular un polígono de cinco lados', () => {
+    const resultado = service.calcularArea(3,3,5);
+    expect(resultado).toBe(22.5);
+  });
+  it('debería calcular un polígono de seis lados', () => {
+    const resultado = service.calcularArea(4,3,6);
+    expect(resultado).toBe(36);
+  })
 });
